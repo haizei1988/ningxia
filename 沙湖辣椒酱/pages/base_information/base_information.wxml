@@ -1,0 +1,78 @@
+<loading hidden="{{hiddenLoading}}">正在加载</loading>
+<form class="form" bindsubmit="formSubmit" report-submit="true">
+
+  <view class='container'>
+    <view>
+      <view>*</view>基地编码</view>
+    <view class='content'>
+      <input placeholder='请输入' class='input' name="base_code" placeholder-class="input" />
+    </view>
+  </view>
+ <view class='container'>
+    <view>
+      <view>*</view>基地名称</view>
+    <view class='content'>
+      <input placeholder='请输入' class='input' name="base_name" placeholder-class="input" />
+    </view>
+  </view>
+  <view class='container'>
+    <view>
+      <view>*</view>负责人姓名</view>
+    <view class='content'>
+      <input placeholder='请输入' class='input' name="person_in_charge" placeholder-class="input" />
+    </view>
+  </view>
+ <view class='container'>
+    <view>
+      <view>*</view>负责人联系方式</view>
+    <view class='content'>
+      <input placeholder='请输入' class='input' name="contact_tel" placeholder-class="input" />
+    </view>
+  </view>
+ 
+<view class='container'>
+    <view>
+      <view>*</view>区域气候</view>
+    <view class='content'>
+      <picker bindchange="result" value="{{index}}" range="{{result_name}}">
+        <!-- <view class='goods' hidden='{{hidden}}' style='color:#9b9b9b'>请务必选择商品名称</view> -->
+        <view class="picker" style='color:#9b9b9b'>
+          {{result_name[index4]}}
+        </view>
+      </picker>
+      <!-- <input placeholder='请输入您的账户名' class='input' placeholder-class="input" /> -->
+    </view>
+  </view>
+
+
+
+   <view class='container'>
+    <view>
+      <view>*</view>所属地区
+    </view>
+    <view class='content'>
+      <view>
+        <input placeholder='请选择地区' name="seed_name" class='input' value='{{goodsName}}'  bindinput="bindKeyInput"  bindfocus='Varieties_feeding' placeholder-class="input" /> </view>
+    </view>
+  </view>
+  <!-- 选择种子 -->
+  <view class='drop_down' hidden='{{array_goods_status}}'>
+    <scroll-view scroll-y style="height: {{height}}px" wx:if='{{array_goods.length}}'>
+      <view wx:for='{{array_goods}}' class='search_content'>
+        <view bindtap='bingId' data-id='{{item}}'>{{item.area_name}}</view>
+        <input hidden='true' name="array_goods" value='{{goodsId}}'></input>
+      </view>
+    </scroll-view>
+    <scroll-view scroll-y style="height: {{height}}px" wx:if='{{!array_goods.length && init}}'>
+      <view style='font-size:31rpx;margin-top:10rpx;'>
+        暂未找到该商品！
+      </view>
+    </scroll-view>
+  </view>
+
+  
+
+  <button class="button" formType="submit">
+    立即创建
+  </button>
+</form>

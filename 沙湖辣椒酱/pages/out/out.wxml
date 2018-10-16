@@ -1,0 +1,2 @@
+<!--pages/out/out.wxml-->
+ <web-view class='container' bindtap='camera' src="{{src}}">sss</web-view>

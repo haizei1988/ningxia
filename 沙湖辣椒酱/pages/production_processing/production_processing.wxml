@@ -1,0 +1,134 @@
+
+<loading hidden="{{hiddenLoading}}">正在加载</loading>
+<form class="form" bindsubmit="formSubmit" report-submit="true">
+  <view class='container'>
+    <view>
+      <view>*</view>投料名称</view>
+    <view class='content'>
+      <input placeholder='请输入投料名称' class='input' name="seed_name" placeholder-class="input" />
+    </view>
+  </view>
+
+  <view class='container'>
+    <view>
+      <view>*</view>品种
+    </view>
+    <view class='content'>
+      <view>
+        <input placeholder='请选择品种' class='input' value='{{goodsName}}' bindinput="bindKeyInput" bindfocus='Varieties_feeding' placeholder-class="input" /> </view>
+    </view>
+  </view>
+  <!-- 投料品种 -->
+
+  <view class='drop_down' hidden='{{array_goods_status}}'>
+    <scroll-view scroll-y bindscrolltolower='loadPaageMore' data-page-name='goods' style="height: {{height}}px" wx:if='{{array_goods.length}}'>
+      <view wx:for='{{array_goods}}' class='search_content'>
+        <view bindtap='bingId' data-id='{{item}}'>{{item.variety_name}}</view>
+        <input hidden='true' name="array_goods" value='{{goodsId}}'></input>
+      </view>
+    </scroll-view>
+    <scroll-view scroll-y style="height: {{height}}px" wx:if='{{!array_goods.length && init}}'>
+      <view style='font-size:31rpx;margin-top:10rpx;'>
+        暂未找到该商品！
+      </view>
+    </scroll-view>
+  </view>
+  <view class='container' >
+    <view>
+      <view>*</view>供应商 </view>
+    <view class='content'>
+      <input placeholder='请选择供应商' class='input' value='{{feederName}}' bindinput="bindKeyInput2" bindfocus='feeder_name' placeholder-class="input" />
+    </view>
+  </view>
+  <view class='drop_down' hidden='{{feeder_name}}'>
+    <scroll-view scroll-y bindscrolltolower='loadPaageMore2' data-page-name='feeder' style="height: {{height}}px" wx:if='{{feeder.length}}'>
+      <view wx:for='{{feeder}}' class='search_content'>
+        <view bindtap='bingId2' data-id='{{item}}'>{{item.supplier_name}}</view>
+        <input hidden='true' name="array_goods" value='{{feederId}}'></input>
+      </view>
+    </scroll-view>
+    <scroll-view scroll-y style="height: {{height}}px" wx:if='{{!feeder.length && init}}'>
+      <view style='font-size:31rpx;margin-top:10rpx;'>
+        暂未找到该商品！
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class='container'>
+    <view>
+      <view>*</view>     
+      生产企业
+      </view>
+    <view class='content'>
+      <input placeholder='请选择生产企业' class='input' value='{{supplierName}}' bindinput="bindKeyInput3" bindfocus='supplier_name' placeholder-class="input" />
+    </view>
+  </view>
+
+  <view class='drop_down' hidden='{{supplier_name}}'>
+    <scroll-view scroll-y bindscrolltolower='loadPaageMore' data-page-name='goods' style="height: {{height}}px" wx:if='{{supplier.length}}'>
+      <view wx:for='{{supplier}}' class='search_content'>
+        <view bindtap='bingId3' data-id='{{item}}'>{{item.manufacturer_name}}</view>
+        <input hidden='true' value='{{supplierId}}'></input>
+      </view>
+    </scroll-view>
+    <scroll-view scroll-y style="height: {{height}}px" wx:if='{{!supplier.length && init}}'>
+      <view style='font-size:31rpx;margin-top:10rpx;'>
+        暂未找到该商品！
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class='container' style='height:140rpx'>
+    <view>
+      <view>*</view><text style='text-align:left'>原料生产经营
+      许可证编码</text> </view>
+    <view class='content'>
+      <input placeholder='请输入投入数量' class='input' name="production_license" placeholder-class="input" />
+    </view>
+  </view>
+
+ <view class='container'>
+    <view>
+      <view>*</view>有效期类型</view>
+    <view class='content'>
+      <picker bindchange="youxiao" value="{{index}}" range="{{youxiao_type_name}}">
+        <!-- <view class='goods' hidden='{{hidden}}' style='color:#9b9b9b'>请务必选择商品名称</view> -->
+        <view class="picker" style='color:#9b9b9b'>
+          {{youxiao_type_name[index1]}}
+        </view>
+      </picker>
+      <!-- <input placeholder='请输入您的账户名' class='input' placeholder-class="input" /> -->
+    </view>
+  </view>
+
+  <view class='container'>
+    <view>
+      <view>*</view>有效期</view>
+    <view class='content'>
+      <input placeholder='请输入有效期' class='input' name="period_validity" placeholder-class="input" />
+    </view>
+  </view>
+
+  <view class='container'>
+    <view>
+      <view>*</view>规格</view>
+    <view class='content'>
+      <input placeholder='请输入规格' class='input' name="specification" placeholder-class="input" />
+    </view>
+  </view>
+
+
+
+  <view class='container'>
+    <view>
+      <view>*</view>计量单位</view>
+    <view class='content'>
+      <input placeholder='请输入计量单位' class='input' name="unit" placeholder-class="input" />
+    </view>
+  </view>
+  
+  <button class="button" formType="submit">
+    立即创建
+  </button>
+
+</form>

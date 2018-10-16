@@ -1,0 +1,67 @@
+<loading hidden="{{hiddenLoading}}">正在加载</loading>
+<form class="form" bindsubmit="formSubmit" report-submit="true">
+  <view class='container'>
+    <view>
+      <view>*</view>品种名称</view>
+    <view class='content'>
+      <input placeholder='请输入' class='input' name="manufacturer_name" placeholder-class="input" />
+    </view>
+  </view>
+ <view class='container'>
+    <view>
+      <view>*</view>品种编码</view>
+    <view class='content'>
+      <input placeholder='请输入' class='input' name="manufacturer_code" placeholder-class="input" />
+    </view>
+  </view>
+ 
+   <view class='container'>
+    <view>
+      <view>*</view>品种介绍</view>
+    <view class='content'>
+      <input placeholder='请输入' class='input' name="variety_brief" placeholder-class="input" />
+    </view>
+  </view>
+
+
+ <view class='container'>
+    <view>
+      <view>*</view>购买地址</view>
+    <view class='content'>
+      <input placeholder='请输入地址' class='input' name="buy_url" placeholder-class="input" />
+    </view>
+  </view>
+
+ <view class='container'>
+    <view>
+      <view>*</view>证件照片</view>
+    <view class='content' bindtap='uploadPhoto'>
+      <input placeholder='请点击上传图片' class='input' name="sales_order_number" placeholder-class="input" />
+        <!-- <textarea class='textarea' placeholder="" name="content" value='{{formdata}}' />     -->
+    </view>
+  </view>
+<!-- 
+<view class='container1'>
+ <view class="big-logos">     
+  <block wx:for="{{img_arr}}" wx:for-item="item" wx:key="*this">  
+    <view class='logoinfo'>  
+      <image src='{{item}}'  data-index="{{index}}" mode="aspectFill" style='width:100rpx;margin-left:30rpx;height:100rpx'></image>  
+       <view class="delete-btn" data-index="{{index}}" catchtap="deleteImg"></view>
+    </view>  
+  </block>  
+ </view> 
+</view> -->
+
+ 
+ <view class="container1">
+  <view class="img" wx:for="{{imgs}}" wx:for-item="item" wx:key="*this">
+    <image src="{{item}}" data-index="{{index}}" mode="aspectFill" bindtap="previewImg" style='width:100rpx;margin-left:30rpx;height:100rpx'></image>
+    <view class="delete-btn" data-index="{{index}}" catchtap="deleteImg">删除</view>
+  </view>
+  <view class="upload-img-btn" bindtap="uploadPhoto"></view>
+</view>  
+
+  <button class="button" formType="submit">
+    立即创建
+  </button>
+</form>

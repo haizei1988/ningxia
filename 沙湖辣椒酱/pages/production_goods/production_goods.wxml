@@ -1,0 +1,81 @@
+<loading hidden="{{hiddenLoading}}">正在加载</loading>
+<form class="form" bindsubmit="formSubmit" report-submit="true">
+  <view class='container'>
+    <view>
+      <view>*</view>商品名称</view>
+    <view class='content'>
+      <input placeholder='请输入' class='input' name="goods_name" placeholder-class="input" />
+    </view>
+  </view>
+
+  <view class='container'>
+    <view>
+      <view>*</view>商品编码</view>
+    <view class='content'>
+      <input placeholder='请输入' class='input' name="goods_code" placeholder-class="input" />
+    </view>
+  </view>
+
+  <view class='container'>
+    <view>
+      <view>*</view>品种
+    </view>
+    <view class='content'>
+      <view>
+        <input placeholder='请选择品种' name="seed_name" class='input' value='{{goodsName}}'  bindinput="bindKeyInput"  bindfocus='Varieties_feeding' placeholder-class="input" /> </view>
+    </view>
+  </view>
+  <!-- 选择种子 -->
+  <view class='drop_down' hidden='{{array_goods_status}}'>
+    <scroll-view scroll-y style="height: {{height}}px" wx:if='{{array_goods.length}}'>
+      <view wx:for='{{array_goods}}' class='search_content'>
+        <view bindtap='bingId' data-id='{{item}}'>{{item.variety_name}}</view>
+        <input hidden='true' name="array_goods" value='{{goodsId}}'></input>
+      </view>
+    </scroll-view>
+    <scroll-view scroll-y style="height: {{height}}px" wx:if='{{!array_goods.length && init}}'>
+      <view style='font-size:31rpx;margin-top:10rpx;'>
+        暂未找到该商品！
+      </view>
+    </scroll-view>
+  </view>
+
+
+  <view class='container'>
+    <view>
+      <view>*</view>执行编码</view>
+    <view class='content'>
+      <input placeholder='请输入' class='input' name="working_code" placeholder-class="input" />
+    </view>
+  </view>
+
+   <view class='container'>
+    <view>
+      <view>*</view>规格</view>
+    <view class='content'>
+      <input placeholder='请输入' class='input' name="specification" placeholder-class="input" />
+    </view>
+  </view>
+
+
+  <view class='container'>
+    <view>
+      <view>*</view>计量单位</view>
+    <view class='content'>
+      <input placeholder='请输入' class='input' name="unit" placeholder-class="input" />
+    </view>
+  </view>
+
+ 
+  <view class='container'>
+    <view>
+      <view>*</view>商品条形码</view>
+    <view class='content'>
+      <input placeholder='请输入' class='input' name="goods_bar" placeholder-class="input" />
+    </view>
+  </view>
+
+  <button class="button" formType="submit">
+    立即创建
+  </button>
+</form>

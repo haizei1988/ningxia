@@ -1,0 +1,24 @@
+<view style='padding:0;margin:0'>
+ <image class="banner" mode='widthFix' src="../../images/banner.jpg"/>
+</view>
+<view class='name'>
+   <image src='/images/seting.png' mode='widthFix'></image>
+   <view>沙湖辣椒酱溯源管理系统</view>
+</view>
+<view class='yemian'> 
+  <navigator url="/pages/admission/admission?name=员工" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/pesticide.png'/>
+   <view>员工管理</view>
+ </navigator>
+   <navigator url="/pages/admission/admission?name=用户" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/ruchang.png'/>
+   <view>用户管理</view>
+ </navigator>
+
+ <view class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/more.png'/>
+   <view>更多</view>
+ </view>
+ <view>
+ </view>
+</view>

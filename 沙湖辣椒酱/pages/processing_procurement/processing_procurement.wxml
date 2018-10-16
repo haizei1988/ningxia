@@ -1,0 +1,141 @@
+<loading hidden="{{hiddenLoading}}">正在加载</loading>
+<form class="form" bindsubmit="formSubmit" report-submit="true">
+  <view class='container'>
+    <view>
+      <view>*</view>投料名称
+    </view>
+    <view class='content'>
+      <view>
+        <input placeholder='请选择投料' name="seed_name" class='input' value='{{goodsName}}'  bindinput="bindKeyInput"  bindfocus='Varieties_feeding' placeholder-class="input" /> </view>
+    </view>
+  </view>
+  <!-- 选择种子 -->
+  <view class='drop_down' hidden='{{array_goods_status}}'>
+    <scroll-view scroll-y style="height: {{height}}px" wx:if='{{array_goods.length}}'>
+      <view wx:for='{{array_goods}}' class='search_content'>
+        <view bindtap='bingId' data-id='{{item}}'>{{item.input_name}}</view>
+        <input hidden='true' name="array_goods" value='{{goodsId}}'></input>
+      </view>
+    </scroll-view>
+    <scroll-view scroll-y style="height: {{height}}px" wx:if='{{!array_goods.length && init}}'>
+      <view style='font-size:31rpx;margin-top:10rpx;'>
+        暂未找到该商品！
+      </view>
+    </scroll-view>
+  </view>
+
+ <view class='container'>
+    <view>
+      <view>*</view>生产日期</view>
+    <view class='content'>
+      <picker mode="date" value="{{date}}" start="2018-01-01" bindchange="bindDateChange3">
+        <!-- <view class='goods' hidden='{{hidden}}' style='color:#9b9b9b'>请务必选择商品名称</view> -->
+        <view class="picker" style='color:#9b9b9b'>
+          {{date2}}
+        </view>
+      </picker>
+    </view>
+  </view>
+
+  <view class='container'>
+    <view>
+      <view>*</view>请选择凭证类型</view>
+    <view class='content'>
+      <picker bindchange="type_style" value="{{index}}" range="{{type_style_name}}">
+        <!-- <view class='goods' hidden='{{hidden}}' style='color:#9b9b9b'>请务必选择商品名称</view> -->
+        <view class="picker" style='color:#9b9b9b'>
+          {{type_style_name[index3]}}
+        </view>
+      </picker>
+      <!-- <input placeholder='请输入您的账户名' class='input' placeholder-class="input" /> -->
+    </view>
+  </view>
+  <view class='container'>
+    <view>
+      <view>*</view>上游追溯码</view>
+    <view class='content'>
+      <input placeholder='请输入' class='input' name="up_trace_code" placeholder-class="input" />
+    </view>
+  </view>
+  <view class='container'>
+    <view>
+      <view>*</view>销售单号</view>
+    <view class='content'>
+      <input placeholder='请输入' class='input' name="sales_order_number" placeholder-class="input" />
+    </view>
+  </view>
+
+  <view class='container'>
+    <view>
+      <view>*</view>采购日期</view>
+    <view class='content'>
+      <picker mode="date" value="{{date}}" start="2018-01-01" bindchange="bindDateChange2">
+        <!-- <view class='goods' hidden='{{hidden}}' style='color:#9b9b9b'>请务必选择商品名称</view> -->
+        <view class="picker" style='color:#9b9b9b'>
+          {{date}}
+        </view>
+      </picker>
+    </view>
+  </view>
+
+  <view class='container'>
+    <view>
+      <view>*</view>采购数量</view>
+    <view class='content'>
+      <input placeholder='请输入' class='input' name="purchase_amount" placeholder-class="input" />
+    </view>
+  </view>
+
+ 
+  <view class='container'>
+    <view>
+      <view>*</view>单价</view>
+    <view class='content'>
+      <input placeholder='请输入' class='input' name="price" placeholder-class="input" />
+    </view>
+  </view>
+
+
+ <view class='container' hidden='{{user}}'>
+    <view>
+      <view>*</view>负责人</view>
+    <view class='content'>
+      <input placeholder='请选择负责人' class='input' value='{{supplierName}}' bindinput="bindKeyInput3" bindfocus='supplier_name' placeholder-class="input" />
+    </view>
+  </view>
+
+
+  <view class='drop_down' hidden='{{supplier_name}}'>
+    <scroll-view scroll-y bindscrolltolower='loadPaageMore' data-page-name='goods' style="height: {{height}}px" wx:if='{{supplier.length}}'>
+      <view wx:for='{{supplier}}' class='search_content'>
+        <view bindtap='bingId3' data-id='{{item}}'>{{item.name}}</view>
+        <input hidden='true' value='{{supplierId}}'></input>
+      </view>
+    </scroll-view>
+    <scroll-view scroll-y style="height: {{height}}px" wx:if='{{!supplier.length && init}}'>
+      <view style='font-size:31rpx;margin-top:10rpx;'>
+        暂未找到负责人！
+      </view>
+    </scroll-view>
+  </view>
+
+
+
+  <view class='container'>
+    <view>
+      <view>*</view>检验结果</view>
+    <view class='content'>
+      <picker bindchange="result" value="{{index}}" range="{{result_name}}">
+        <!-- <view class='goods' hidden='{{hidden}}' style='color:#9b9b9b'>请务必选择商品名称</view> -->
+        <view class="picker" style='color:#9b9b9b'>
+          {{result_name[index4]}}
+        </view>
+      </picker>
+      <!-- <input placeholder='请输入您的账户名' class='input' placeholder-class="input" /> -->
+    </view>
+  </view>
+
+  <button class="button" formType="submit">
+    立即创建
+  </button>
+</form>

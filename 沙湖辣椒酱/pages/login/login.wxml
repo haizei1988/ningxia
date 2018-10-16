@@ -1,0 +1,32 @@
+<loading hidden='{{loadingHidden}}'>正在登陆</loading>
+<view >
+  <image mode="widthFix" class='bg_img' src="../../images/bg_img.jpg" />
+</view>
+<view  class='logo'>
+<image mode="widthFix" class="logo_img" src="../../images/logo.png"/>
+</view>
+<view class='logo_wenzi'>
+沙湖辣椒酱追溯系统
+</view>
+<view class='logo_Eng'>
+Shahu chili sauce Traceability System
+</view>
+<form class="form" bindsubmit="formSubmit" report-submit="true">
+<view class='login'>
+  <view class='login_user'>
+    <view class='user'>账号</view>
+    <view class='user2'>
+      <input placeholder='请输入您的账户名' class='input' name="phone" placeholder-class="input" />
+    </view>
+  </view>
+  <view class='login_psd'>
+    <view class='user' >密码</view>
+    <view class='user2'>
+      <input placeholder='请输入您的密码' type="password" class='input' name="psd" placeholder-class="input" />
+    </view>
+  </view>
+</view>
+<button class='button'  formType="submit">
+登录
+</button>
+</form> 

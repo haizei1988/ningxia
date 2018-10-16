@@ -1,0 +1,132 @@
+
+<loading hidden="{{hiddenLoading}}">正在加载</loading>
+<form class="form" bindsubmit="formSubmit" report-submit="true">
+  <view class='container'>
+    <view>
+      <view>*</view>生产批次码
+    </view>
+    <view class='content'>
+      <view>
+        <input placeholder='请选择批次码' class='input' value='{{goodsName}}' bindinput="bindKeyInput" bindfocus='Varieties_feeding' placeholder-class="input" /> </view>
+    </view>
+  </view>
+  <!-- 投料品种 -->
+
+  <view class='drop_down' hidden='{{array_goods_status}}'>
+    <scroll-view scroll-y bindscrolltolower='loadPaageMore' data-page-name='goods' style="height: {{height}}px" wx:if='{{array_goods.length}}'>
+      <view wx:for='{{array_goods}}' class='search_content'>
+        <view bindtap='bingId' data-id='{{item}}'>{{item.batch_code}}</view>
+        <input hidden='true' name="array_goods" value='{{goodsId}}'></input>
+      </view>
+    </scroll-view>
+    <scroll-view scroll-y style="height: {{height}}px" wx:if='{{!array_goods.length && init}}'>
+      <view style='font-size:31rpx;margin-top:10rpx;'>
+        暂未找到该商品！
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class='container'>
+    <view>
+      <view>*</view> 检验标准</view>
+    <view class='content'>
+      <picker bindchange="standards" value="{{index}}" range="{{standards_name}}">
+        <!-- <view class='goods' hidden='{{hidden}}' style='color:#9b9b9b'>请务必选择商品名称</view> -->
+        <view class="picker" style='color:#9b9b9b'>
+          {{standards_name[index3]}}
+        </view>
+      </picker>
+      <!-- <input placeholder='请输入您的账户名' class='input' placeholder-class="input" /> -->
+    </view>
+  </view>
+
+  <view class='container'>
+    <view>
+      <view>*</view>检验人员</view>
+    <view class='content'>
+      <input placeholder='请输入检验人员' class='input' type='number' name="inspection_user" placeholder-class="input" />
+    </view>
+  </view>
+
+  <view class='container'>
+    <view>
+      <view>*</view>检验日期</view>
+    <view class='content'>
+      <picker mode="date" value="{{date}}" start="2018-01-01" bindchange="bindDateChange2">
+        <!-- <view class='goods' hidden='{{hidden}}' style='color:#9b9b9b'>请务必选择商品名称</view> -->
+        <view class="picker" style='color:#9b9b9b'>
+          {{date}}
+        </view>
+      </picker>
+    </view>
+  </view>
+
+  <view class='container'>
+    <view>
+      <view>*</view> 检验结果</view>
+    <view class='content'>
+      <picker bindchange="result" value="{{index}}" range="{{result_name}}">
+        <!-- <view class='goods' hidden='{{hidden}}' style='color:#9b9b9b'>请务必选择商品名称</view> -->
+        <view class="picker" style='color:#9b9b9b'>
+          {{result_name[index4]}}
+        </view>
+      </picker>
+      <!-- <input placeholder='请输入您的账户名' class='input' placeholder-class="input" /> -->
+    </view>
+  </view>
+
+  <view class='container'>
+    <view>
+      <view>*</view>检验单号</view>
+    <view class='content'>
+      <input placeholder='请输入检验单号' class='input' type='number' name="inspection_sheet_no" placeholder-class="input" />
+    </view>
+  </view>
+
+  <view class='container'>
+    <view>
+      <view>*</view> 检验报告类型</view>
+    <view class='content'>
+      <picker bindchange="types" value="{{index}}" range="{{types_name}}">
+        <!-- <view class='goods' hidden='{{hidden}}' style='color:#9b9b9b'>请务必选择商品名称</view> -->
+        <view class="picker" style='color:#9b9b9b'>
+          {{types_name[index2]}}
+        </view>
+      </picker>
+      <!-- <input placeholder='请输入您的账户名' class='input' placeholder-class="input" /> -->
+    </view>
+  </view>
+
+
+<view class='container'>
+    <view>
+      <view>*</view>检验合格证</view>
+    <view class='content' bindtap='uploadPhoto'>
+      <input placeholder='请点击上传图片' class='input' name="sales_order_number" placeholder-class="input" />
+        <!-- <textarea class='textarea' placeholder="" name="content" value='{{formdata}}' />     -->
+    </view>
+  </view>
+<!-- 
+<view class='container1'>
+ <view class="big-logos">     
+  <block wx:for="{{img_arr}}" wx:for-item="item" wx:key="*this">  
+    <view class='logoinfo'>  
+      <image src='{{item}}'  data-index="{{index}}" mode="aspectFill" style='width:100rpx;margin-left:30rpx;height:100rpx'></image>  
+       <view class="delete-btn" data-index="{{index}}" catchtap="deleteImg"></view>
+    </view>  
+  </block>  
+ </view> 
+</view> -->
+
+ <view class="container1">
+  <view class="img" wx:for="{{imgs}}" wx:for-item="item" wx:key="*this">
+    <image src="{{item}}" data-index="{{index}}" mode="aspectFill" bindtap="previewImg" style='width:100rpx;margin-left:30rpx;height:100rpx'></image>
+    <view class="delete-btn" data-index="{{index}}" catchtap="deleteImg">删除</view>
+  </view>
+  <view class="upload-img-btn" bindtap="uploadPhoto"></view>
+</view>  
+
+  <button class="button" formType="submit">
+    立即创建
+  </button>
+</form>

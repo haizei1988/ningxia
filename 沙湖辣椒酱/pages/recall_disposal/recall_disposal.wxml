@@ -1,0 +1,72 @@
+<view style='padding:0;margin:0'>
+ <image class="banner" mode='widthFix' src="../../images/banner.jpg"/>
+</view>
+<view class='name'>
+   <image src='/images/seting.png' mode='widthFix'></image>
+   <view>沙湖辣椒酱溯源管理系统</view>
+</view>
+<view class='yemian'> 
+ <navigator url="/pages/admission/admission?name=种子" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/seed.png'/>
+   <view class='ps'>种子信息管理</view>
+ </navigator>
+  <navigator url="/pages/admission/admission?name=肥料" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/fertilizers.png'/>
+   <view class='ps'>肥料信息管理</view>
+ </navigator>
+  <navigator url="/pages/admission/admission?name=农药" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/pesticide.png'/>
+   <view class='ps'>农药信息管理</view>
+ </navigator>
+   <navigator url="/pages/admission/admission?name=其他" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/ruchang.png'/>
+   <view class='ps'>其他投入品</view>
+ </navigator>
+<navigator url="/pages/admission/admission?name=投料品种" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/1.png'/>
+   <view class='ps'>投料品种</view>
+ </navigator>
+  <navigator url="/pages/admission/admission?name=基地" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/2x.png'/>
+   <view class='ps'>基地信息</view>
+ </navigator>
+  <navigator url="/pages/admission/admission?name=种植地块" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/3.png'/>
+   <view class='ps'>种植地块</view>
+ </navigator>
+  <navigator url="/pages/admission/admission?name=生产商厂商" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/6.png'/>
+   <view class='ps'>生产厂商管理</view>
+ </navigator>
+   <navigator url="/pages/admission/admission?name=供应商" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/5.png'/>
+   <view class='ps'>供应商管理</view>
+ </navigator>
+<navigator url="/pages/admission/admission?name=客户" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/4.png'/>
+   <view class='ps'>客户信息管理</view>
+ </navigator>
+  <navigator url="/pages/admission/admission?name=食用农产品合格证书" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/8.png'/>
+   <view class='ps'>食用农产品合格证书</view>
+ </navigator>
+  <navigator url="/pages/admission/admission?name=生产加工商品" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/1.png'/>
+   <view class='ps'>生产加工商品</view>
+ </navigator>
+  <navigator url="/pages/admission/admission?name=生产加工投料" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/4.png'/>
+   <view class='ps'>生产加工投料</view>
+ </navigator>
+  <navigator url="/pages/admission/admission?name=生产加工原料" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/3.png'/>
+   <view class='ps'>生产加工原料</view>
+ </navigator>
+
+ <view class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/more.png'/>
+   <view>更多</view>
+ </view>
+ <view>
+ </view>
+</view>

@@ -1,0 +1,14 @@
+.input1 {
+ width: 89.3%;
+  height: 100rpx;
+  border-bottom: 1px solid green; 
+  padding: 20rpx 0;
+   background: #04a1e7;
+  border-radius: 4px;  
+  font-family: PingFang-SC-Regular;
+  opacity: 0.7;
+   margin: auto; 
+  font-size: 18px;
+  color: #e5e5e5;
+  letter-spacing: -0.1px;
+}

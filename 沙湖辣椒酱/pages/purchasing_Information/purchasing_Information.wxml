@@ -1,0 +1,42 @@
+<view style='padding:0;margin:0'>
+ <image class="banner" mode='widthFix' src="../../images/banner.jpg"/>
+</view>
+<view class='name'>
+   <image src='/images/seting.png' mode='widthFix'></image>
+   <view>乐海山瓜菜溯源管理系统</view>
+</view>
+<view class='yemian'> 
+ <navigator url="/pages/admission/admission?name=种子采购" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/seed.png'/>
+   <view class='ps'>种子采购信息管理</view>
+ </navigator>
+  <navigator url="/pages/admission/admission?name=肥料采购" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/fertilizers.png'/>
+   <view class='ps'>肥料采购信息管理</view>
+ </navigator>
+  <navigator url="/pages/admission/admission?name=农药采购" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/pesticide.png'/>
+   <view class='ps'>农药采购信息管理</view>
+ </navigator>
+   <navigator url="/pages/admission/admission?name=其他采购" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/ruchang.png'/>
+   <view class='ps'>其他采购信息管理</view>
+ </navigator>
+
+
+   <navigator url="/pages/admission/admission?name=加工原料采购" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/ruchang.png'/>
+   <view class='ps'>加工原料采购</view>
+ </navigator>
+    <navigator url="/pages/admission/admission?name=加工投料采购" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/ruchang.png'/>
+   <view class='ps'>加工投料采购</view>
+ </navigator>
+
+ <view class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/more.png'/>
+   <view>更多</view>
+ </view>
+ <view>
+ </view>
+</view>

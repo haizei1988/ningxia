@@ -1,0 +1,110 @@
+<loading hidden="{{hiddenLoading}}">正在加载</loading>
+<form class="form" bindsubmit="formSubmit" report-submit="true">
+  <view class='container'>
+    <view>
+      <view>*</view>厂商名称</view>
+    <view class='content'>
+      <input placeholder='请输入' class='input' name="manufacturer_name" placeholder-class="input" />
+    </view>
+  </view>
+ <view class='container'>
+    <view>
+      <view>*</view>厂商编码</view>
+    <view class='content'>
+      <input placeholder='请输入' class='input' name="manufacturer_code" placeholder-class="input" />
+    </view>
+  </view>
+   <view class='container'>
+    <view>
+      <view>*</view>生产许可证编码</view>
+    <view class='content'>
+      <input placeholder='请输入' class='input' name="production_license" placeholder-class="input" />
+    </view>
+  </view>
+   <view class='container'>
+    <view>
+      <view>*</view>经营类型</view>
+    <view class='content'>
+      <input placeholder='请输入' class='input' name="operate_type" placeholder-class="input" />
+    </view>
+  </view>
+ <view class='container'>
+    <view>
+      <view>*</view>类型</view>
+    <view class='content'>
+      <picker bindchange="result" value="{{index}}" range="{{result_name}}">
+        <!-- <view class='goods' hidden='{{hidden}}' style='color:#9b9b9b'>请务必选择商品名称</view> -->
+        <view class="picker" style='color:#9b9b9b'>
+          {{result_name[index4]}}
+        </view>
+      </picker>
+      <!-- <input placeholder='请输入您的账户名' class='input' placeholder-class="input" /> -->
+    </view>
+  </view>
+
+
+
+ <view class='container'>
+    <view>
+      <view>*</view>备案日期</view>
+    <view class='content'>
+      <picker mode="date" value="{{date}}" start="2018-01-01" bindchange="bindDateChange3">
+        <!-- <view class='goods' hidden='{{hidden}}' style='color:#9b9b9b'>请务必选择商品名称</view> -->
+        <view class="picker" style='color:#9b9b9b'>
+          {{date2}}
+        </view>
+      </picker>
+    </view>
+  </view>
+
+ <view class='container'>
+    <view>
+      <view>*</view>负责人</view>
+    <view class='content'>
+      <input placeholder='请输入2 至 10 个字符' class='input' name="legal_man" placeholder-class="input" />
+    </view>
+  </view>
+
+  <view class='container'>
+    <view>
+      <view>*</view>手机号码</view>
+    <view class='content'>
+      <input placeholder='请输入11位手机号' class='input' name="phone" placeholder-class="input" />
+    </view>
+  </view>
+
+
+ <view class='container'>
+    <view>
+      <view>*</view>检验合格证</view>
+    <view class='content' bindtap='uploadPhoto'>
+      <input placeholder='请点击上传图片' class='input' name="sales_order_number" placeholder-class="input" />
+        <!-- <textarea class='textarea' placeholder="" name="content" value='{{formdata}}' />     -->
+    </view>
+  </view>
+<!-- 
+<view class='container1'>
+ <view class="big-logos">     
+  <block wx:for="{{img_arr}}" wx:for-item="item" wx:key="*this">  
+    <view class='logoinfo'>  
+      <image src='{{item}}'  data-index="{{index}}" mode="aspectFill" style='width:100rpx;margin-left:30rpx;height:100rpx'></image>  
+       <view class="delete-btn" data-index="{{index}}" catchtap="deleteImg"></view>
+    </view>  
+  </block>  
+ </view> 
+</view> -->
+
+ 
+ <view class="container1">
+  <view class="img" wx:for="{{imgs}}" wx:for-item="item" wx:key="*this">
+    <image src="{{item}}" data-index="{{index}}" mode="aspectFill" bindtap="previewImg" style='width:100rpx;margin-left:30rpx;height:100rpx'></image>
+    <view class="delete-btn" data-index="{{index}}" catchtap="deleteImg">删除</view>
+  </view>
+  <view class="upload-img-btn" bindtap="uploadPhoto"></view>
+</view>  
+
+
+  <button class="button" formType="submit">
+    立即创建
+  </button>
+</form>

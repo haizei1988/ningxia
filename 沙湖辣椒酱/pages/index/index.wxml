@@ -1,0 +1,75 @@
+<view style='padding:0;margin:0'>
+ <image class="banner" mode='widthFix' src="../../images/banner.jpg"/>
+</view>
+<view class='name'>
+   <image src='/images/seting.png' mode='widthFix'></image>
+   <view>沙湖辣椒酱溯源管理系统</view>
+</view>
+<view class='yemian'> 
+ <navigator url="/pages/purchasing_Information/purchasing_Information" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/seed.png'/>
+   <view class='ps'>采购信息管理</view>
+ </navigator>
+  <navigator url="/pages/agricultural_management/agricultural_management" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/fertilizers.png'/>
+   <view class='ps'>农事作业管理</view>
+ </navigator>
+  <navigator url="/pages/sales_transaction/sales_transaction" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/pesticide.png'/>
+   <view class='ps'>销售交易管理</view>
+ </navigator>
+   <navigator url="/pages/recall_disposal/recall_disposal" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/ruchang.png'/>
+   <view class='ps'>召回处置管理</view>
+ </navigator>
+  <navigator url="/pages/recall_disposal/recall_disposal" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/1.png'/>
+   <view class='ps'>基础信息管理</view>
+ </navigator>
+  <navigator url="/pages/system_settings/system_settings" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/5.png'/>
+   <view class='ps'>系统设置管理</view>
+ </navigator>
+   <navigator url="/pages/production_management/production_management" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/6.png'/>
+   <view class='ps'>生产加工管理</view>
+ </navigator>
+     <!-- <navigator url="/pages/admission/admission?name=入场" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/ruchang.png'/>
+   <view>实时气象信息管理</view>
+ </navigator> 
+    <navigator url="/pages/admission/admission?name=入场" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/ruchang.png'/>
+   <view>基础信息管理</view>
+ </navigator>
+   <navigator url="/pages/admission/admission?name=入场" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/ruchang.png'/>
+   <view>实时气象信息管理</view>
+ </navigator>
+    <navigator url="/pages/admission/admission?name=入场" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/ruchang.png'/>
+   <view>基础信息管理</view>
+ </navigator> 
+    <navigator url="/pages/admission/admission?name=入场" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/ruchang.png'/>
+   <view>过程信息管理</view>
+ </navigator>
+    <navigator url="/pages/admission/admission?name=入场" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/ruchang.png'/>
+   <view>施药信息管理</view>
+ </navigator> 
+    <navigator url="/pages/admission/admission?name=入场" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/ruchang.png'/>
+   <view>收货信息管理</view>
+ </navigator>
+    <navigator url="/pages/admission/admission?name=入场" class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/ruchang.png'/>
+   <view>灌溉信息管理</view>
+ </navigator>  -->
+ <view class='ruchang1'>
+   <image mode='widthFix' class='ruchang' src='../../images/more.png'/>
+   <view>更多</view>
+ </view>
+ <view>
+ </view>
+</view>

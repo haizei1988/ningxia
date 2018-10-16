@@ -1,0 +1,27 @@
+<form class="form" bindsubmit="formSubmit" report-submit="true">
+<view style='width:100%'>
+  <view class='logo' > 
+  <image mode='widthFix' class="logo_img" src='../../images/logo2.png'/>
+  </view>
+
+<view class='input'>
+   <input placeholder-class='input_xinxi' name='num' placeholder='输入产品编码查询'/> 
+</view>
+
+<view class='search'>
+<view>
+  <navigator url='/pages/admission/admission' class='fanhui'>
+  返回
+  </navigator>
+</view>
+
+  <view>
+    <button class='chaxun' formType="submit">
+  搜索
+  </button>
+</view>
+
+</view>
+
+</view>
+</form>

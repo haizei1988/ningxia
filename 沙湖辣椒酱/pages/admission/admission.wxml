@@ -1,0 +1,13 @@
+<view class='container' bindtap='navigata'>
+ {{name}}信息添加
+</view>
+
+<view class='container' bindtap='camera'>
+  扫描二维码查询
+</view>
+<navigator class='container' url="/pages/search/search">
+   输入产品编号查询
+</navigator>
+
+<!-- <input placeholder-class="input1" placeholder='输入产品编号查询'/> -->
+
